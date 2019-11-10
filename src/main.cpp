@@ -89,8 +89,7 @@ void usercontrol( void ) {
     // Cube Tray Angler //
     if (Controller.ButtonR1.pressing()) {
       ctaMotor.rotateTo(0, rotationUnits::deg, 50, velocityUnits::pct, false);
-    }
-    if (Controller.ButtonR2.pressing()) {
+    } else if (Controller.ButtonR2.pressing()) {
       ctaMotor.rotateTo(185, rotationUnits::deg, 50, velocityUnits::pct, false);
     }
 
