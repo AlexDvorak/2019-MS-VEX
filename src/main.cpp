@@ -96,11 +96,15 @@ void usercontrol( void ) {
 
     if (Controller.ButtonL1.pressing()) {
       intakeMotorLeft.spin(directionType::fwd, 100, velocityUnits::pct);
+    } else if (Controller.ButtonL2.pressing()) {
+      intakeMotorLeft.spin(directionType::rev, 100, velocityUnits::pct); 
     } else {
       intakeMotorLeft.stop();
     }
     if (Controller.ButtonL1.pressing()) {
       intakeMotorRight.spin(directionType::fwd, 100, velocityUnits::pct);
+    } else if (Controller.ButtonL2.pressing()){
+      intakeMotorRight.spin(directionType::rev, 100, velocityUnits::pct); 
     } else {
       intakeMotorRight.stop();
     }
